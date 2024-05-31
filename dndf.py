@@ -261,10 +261,9 @@ n_iterations_validation =288 #814  mnist.validation.num_examples // batch_size  
 
 '''后续添加的,以另一种方式实现第一、二个卷积层。意外，只是实现方法不一样，参数未变，准确率从5点提高到78点'''
 
-xs = tf.placeholder(tf.float32, [batch_size,  xarr])   # 声明一个占位符，None表示输入图片的数量不定，6*250矩阵(28*28图片分辨率)
+xs = tf.placeholder(tf.float32, [batch_size,  xarr])   # 声明一个占位符，None表示输入图片的数量不定，6*250矩阵
 ys = tf.placeholder(tf.float32, [batch_size,classnum])  # 类别是0-1总共2个类别，对应输出分类结果   
 keep_prob = tf.placeholder(tf.float32)  
-#x_image = tf.reshape(xs, [batch_size,  10]) # x_image又把xs reshape成了28*28*1的形状，因为是灰色图片，所以通道是1.作为训练时的input，-1代表图片数量不定 
 xs = tf.reshape(xs, [batch_size, 1, xarr])    
 
 inputdata = scipy.io.loadmat('A1.mat')
