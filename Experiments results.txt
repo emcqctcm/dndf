@@ -1,3 +1,7 @@
+Dataset download address: http://www.bbci.de/competition/iv/
+
+Experiment result:
+
 Fig 2.  Average value of BCA in single source domain transfer on dataset MI1 (%).
 Fig 3. Average value of BCA in single source domain transfer on dataset MI2 (%).
 
